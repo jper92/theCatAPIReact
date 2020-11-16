@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb",
+  "overrides": [
+    {
+      "files": [
+        "**/__tests__/*.js",
+        "**/__mocks__/*.js"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}
