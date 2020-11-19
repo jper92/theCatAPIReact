@@ -1,7 +1,8 @@
 import styles from './Card.module.css';
 
-const Card = ({ onClick, children }) => (
+const Card = ({ onClick, children, ...props }) => (
   <button
+    {...props}
     type="button"
     className={styles.card}
     onClick={onClick}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import SelectStep from 'components/SelectStep';
+import CanvasStep from 'components/CanvasStep';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
       <main className={styles.main}>
         {currentStep === 0
           ? <SelectStep onNext={onNextStep} />
-          : null}
+          : <CanvasStep />}
       </main>
 
       <footer className={styles.footer}>

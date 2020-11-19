@@ -1,9 +1,8 @@
 import { getCatId } from 'lib/catUtils';
 import { createSelector } from 'reselect';
+import { selectedCatsSelector } from './selectedCats';
 
-const catListSelector = (state) => state.catList.cats;
-
-const selectedCatsSelector = (state) => state.catList.selectedCats;
+export const catListSelector = (state) => state.catList.cats;
 
 export const availableCatListSelector = createSelector(
   catListSelector,

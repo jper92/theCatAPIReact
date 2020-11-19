@@ -47,3 +47,9 @@
 .button {
   margin: 1rem;
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

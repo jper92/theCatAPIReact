@@ -1,12 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import catsApi from 'api/ cats/catsApi';
 import getCatName from 'lib/catNames';
-import { findCatIndexById, getCatId } from 'lib/catUtils';
 
 const initialState = {
   cats: [],
   catsLoading: false,
-  selectedCats: [],
   breeds: [],
   breedsLoading: false,
 };
@@ -34,25 +32,6 @@ const fetchBreeds = createAsyncThunk(
 const catsSlice = createSlice({
   name: 'catList',
   initialState,
-  reducers: {
-    selectCat: (state, action) => {
-      const cat = action.payload;
-      const catId = getCatId(cat);
-      const { selectedCats } = state;
-      if (findCatIndexById(catId, selectedCats) === -1) {
-        state.selectedCats.push(cat);
-      }
-    },
-    unselectCat: (state, action) => {
-      const cat = action.payload;
-      const catId = getCatId(cat);
-      const { selectedCats } = state;
-      const indexToRemove = findCatIndexById(catId, selectedCats);
-      if (indexToRemove > -1) {
-        state.selectedCats.splice(indexToRemove, 1);
-      }
-    },
-  },
   extraReducers: {
     [fetchCats.pending]: (state) => {
       state.catsLoading = true;
@@ -81,6 +60,5 @@ const catsSlice = createSlice({
 });
 
 export { fetchCats, fetchBreeds };
-export const { selectCat, unselectCat } = catsSlice.actions;
 
 export default catsSlice.reducer;

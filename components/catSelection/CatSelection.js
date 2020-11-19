@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { unselectCat } from 'store/reducers/catList';
+import { unselectCat } from 'store/reducers/selectedCats';
+import { selectedCatsSelector } from 'store/selectors/selectedCats';
 import CatCard from './CatCard';
 import styles from './CatSelection.module.css';
 
 const CatSelection = () => {
-  const { selectedCats } = useSelector((state) => state.catList);
+  const selectedCats = useSelector(selectedCatsSelector);
   const dispatch = useDispatch();
 
   const onCardClick = (cat) => dispatch(unselectCat(cat));

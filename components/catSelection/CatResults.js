@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectCat } from 'store/reducers/catList';
+import { selectCat } from 'store/reducers/selectedCats';
 import { availableCatListSelector } from 'store/selectors/catList';
 import CatCard from './CatCard';
 import styles from './CatResults.module.css';
