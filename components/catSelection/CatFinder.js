@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchBreeds, fetchCats } from 'store/reducers/catList';
+import { fetchBreeds, fetchCats } from 'store/modules/catList';
 
 const useBreeds = (dispatch) => {
   useEffect(() => {

@@ -1,4 +1,4 @@
-import { findCatIndexById, getCatId } from 'lib/catUtils';
+import { getCatId } from 'lib/catUtils';
 import { createSelector } from 'reselect';
 import { selectedCatsSelector } from './selectedCats';
 
@@ -9,7 +9,6 @@ export const catsForCanvasSelector = createSelector(
   selectedCatsSelector,
   (catCanvas, selectedCats) => {
     const catCanvasIds = catCanvas.map(getCatId);
-    console.log('what', catCanvasIds, selectedCats);
     return selectedCats.filter((cat) => catCanvasIds.indexOf(getCatId(cat)) === -1);
   },
 );

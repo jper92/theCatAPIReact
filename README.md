@@ -1,10 +1,13 @@
 ## Getting started
 
-Start the server using
+Start the dev server using
 ```
+yarn install
+
 yarn dev
 
 or 
 
+npm install
 npm run dev
 ```

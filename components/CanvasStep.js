@@ -3,9 +3,8 @@ import { Image, Layer, Stage } from 'react-konva';
 import { useDispatch, useSelector } from 'react-redux';
 import useImage from 'use-image';
 import { catCanvasSelector } from 'store/selectors/catCanvas';
-import { addCat } from 'store/reducers/catCanvas';
+import { addCat } from 'store/modules/catCanvas';
 import { getCatId } from 'lib/catUtils';
-import downloadUri from 'lib/downloadUri';
 import CatOptions from './canvas/CatOptions';
 import styles from './Step.module.css';
 
