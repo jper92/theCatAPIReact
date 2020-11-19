@@ -1,5 +1,17 @@
 {
   "extends": "airbnb",
+  "rules": {
+    "react/react-in-jsx-scope": ["off"],
+    "react/jsx-filename-extension": ["off"],
+    "react/jsx-props-no-spreading": ["off"],
+    "react/prop-types": ["off"],
+    "no-param-reassign": ["off"],
+    "import/prefer-default-export": ["off"],
+    "import/no-unresolved": ["off"]
+  },
+  "env": {
+    "browser": true
+  },
   "overrides": [
     {
       "files": [
